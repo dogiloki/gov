@@ -1,0 +1,43 @@
+.content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.content-ticker{
+	display: block;
+	padding: 10px 20px 10px 20px;
+	background: #ebebeb;
+	color: #353535;
+	margin-top: 10px;
+	max-width: 600px;
+	min-width: 400px;
+	cursor: pointer;
+}
+/* Logo */
+.content-logo{
+	display: flex;
+	align-items: center;
+}
+.logo{
+	margin: 0px 10px 0px 20px;
+}
+.title{
+	font-size: 20px;
+	color: #f5f5f5;
+	/*-webkit-text-stroke: 1px #F86400;
+	text-shadow: 1px 1px #F86400,
+	2px 2px #F86400,
+	3px 3px #F86400;*/
+	position: relative;
+}
+.title span{
+	font-family: Bell MT;
+}
+/* Entrega */
+.content-datos{
+	margin-top: 20px;
+	display: block;
+}
+.datos,th,td{
+	padding: 5px 5px 5px 0px;
+}

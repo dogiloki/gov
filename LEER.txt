@@ -1,0 +1,15 @@
+BASE DE DATOS
+esta en la carpeta db
+se llama: gov
+
+//Para adminsitrador
+usuario: admin
+contraseña: Loki12345678
+
+INTEGRANTES
+Kelly Esther Mendoza Gachuz
+Tania Nataly Lozada Rodríguez
+Luis Enrique Vilchis Miguel
+Julio César Villanueva Ontiveros
+Luis Antonio Aguilar Hinojosa
+José Antonio Elizalde Rivero

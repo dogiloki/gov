@@ -1,0 +1,121 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: arial;
+}
+body{
+	background: #444444;
+}
+header{
+	height: 50px;
+	display: flex;
+	align-items: center;
+	background: none;
+	box-shadow: 0px 1px #F86400;
+}
+.logo{
+	margin: 0px 10px 0px 20px;
+	cursor: pointer;
+}
+.title{
+	font-size: 30px;
+	cursor: pointer;
+	color: #f5f5f5;
+	width: 100%;
+	/*-webkit-text-stroke: 1px #F86400;
+	text-shadow: 1px 1px #F86400,
+	2px 2px #F86400,
+	3px 3px #F86400;*/
+	font-family: Bell MT;
+}
+header .nav-header{
+	width: 100%;
+	display: inline-flex;
+	justify-content: right;
+	padding-right: 20px;
+}
+header .op-header{
+	list-style: none;
+	color: #f5f5f5;
+	display: inline-flex;
+	justify-content: center;
+	white-space: nowrap;
+	margin: 10px;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.1s all ease;
+	text-align: center;
+}
+header .op-header:hover{
+	opacity: 0.8;
+	color: #F86400;
+}
+
+/* Menu */
+.content-menu{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 0px; top: 0px;
+	background: none;
+	z-index: 10;
+}
+.menu{
+	position: fixed;
+	top: 51px; right: 30px;
+	max-width: 300px;
+	min-width: 200px;
+	height: auto;
+	padding: 20px;
+	-webkit-box-shadow: 3px 3px 10px 0px #000;
+	-moz-box-shadow: 3px 3px 10px 0px #000;
+	box-shadow: 3px 3px 10px 0px #000;
+	background: #666;
+	display: block;
+	color: #f5f5f5;
+	border-radius: 0px 0px 10px 10px;
+	animation: 0.3s mover_menu ease;
+	-webkit-animation: 0.3s mover_menu ease;
+	-moz-animation: 0.3s mover_menu ease;
+}
+.content-img{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.content-img .img{
+	width: 130px;
+	height: 130px;
+	border-radius: 100%;
+}
+.content-name{
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+.content-email{
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	margin: 3px 0px 10px 0px;
+}
+.content-menu li{
+	list-style-type: none;
+	padding: 7px 5px 7px 5px;
+	cursor: pointer;
+	transition: 0.1s all ease;
+	display: flex;
+	align-content: center;
+}
+.content-menu li:hover{
+	background: #444;
+}
+@keyframes mover_menu{
+	from{
+		transform: translateY(-100%);
+	}
+	to{
+		transform: translateY(0%);	
+	}
+}

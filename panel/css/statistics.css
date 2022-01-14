@@ -1,0 +1,38 @@
+.products{
+	display: flex;
+	margin: 0px 50px 50px 50px;
+	justify-content: space-between;
+}
+h3{
+	color: #fff;
+	margin: 10px 50px 0px 50px;
+}
+.product{
+	border: 1px solid #c2c2c2;
+	display: block;
+	max-width: 170px;
+	min-width: 100px;
+	cursor: default;
+}
+.content-img{
+	max-width: 170px;
+	min-width: 100px;
+}
+.product .title-product{
+	padding: 10px;
+    font-size: 20px;
+    color: #84b418;
+    text-align: center;
+}
+.product .price{
+	color: #F86400;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+}
+.product .sold{
+	color: #c2c2c2;
+	font-size: 16px;
+	text-align: center;
+	padding: 10px;
+}
