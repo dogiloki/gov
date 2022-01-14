@@ -25,6 +25,7 @@
 			);
 		}
 	}
+
 	function getCodePostal($tipo,$code,$conexion){
 		$rs_code_potal=mysqli_query($conexion,"SELECT * FROM postal_code WHERE cp='".$code."'");
 		while($row_code_postal=mysqli_fetch_array($rs_code_potal)){

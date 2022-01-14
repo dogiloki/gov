@@ -59,6 +59,9 @@ if(!isset($_SESSION['gov']['id']) || $_SESSION['gov']['admin']==0){
 			$s=explode(" ",$_POST['search']);
 			$like="WHERE ";
 			for($a=0; $a<sizeof($s); $a++){
+				if($a!=0){
+					$like.="OR ";
+				}
 				$like.="title LIKE '%".$s[$a]."%' OR category LIKE '%".$s[$a]."%' OR seccion LIKE '%".$s[$a]."%' OR price LIKE '%".$s[$a]."%' OR description LIKE '%".$s[$a]."%' OR format LIKE '%".$s[$a]."%' OR status LIKE '%".$s[$a]."%'";
 			}
 		}else{

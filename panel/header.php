@@ -2,10 +2,13 @@
 session_cache_limiter("must-revalidate");
 include("../conexion.php");
 session_start();
-if(!isset($_SESSION['gov']['id']) && $_SESSION['gov']['admin']==0){
+if(!isset($_SESSION['gov']['id'])){
 	header("location:../index.php");
 }else{
 	getInfoUser($_SESSION['gov']['id'],$conexion);
+	if($_SESSION['gov']['admin']==0){
+		header("location:../index.php");
+	}
 	?>
 	<header>
 		<img src="img/logo.png" width="75px" height="50px" class="logo" onclick="window.location='index.php'">
