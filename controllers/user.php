@@ -216,18 +216,18 @@
 						$user_login=$row_login2['user'];
 					}
 				}else{
-					$rs_login=mysqli_query($conexion,"SELECT * FROM users WHERE user LIKE '%".$_POST['user']."%'");
+					$rs_login=mysqli_query($conexion,"SELECT * FROM users WHERE user='".$_POST['user']."' OR email='".$_POST['user']."'");
 				}
 			}else{
 				$user_login=$_POST['user'];
-				$rs_login=mysqli_query($conexion,"SELECT * FROM users WHERE user LIKE '%".$_POST['user']."%'");
+				$rs_login=mysqli_query($conexion,"SELECT * FROM users WHERE user='".$_POST['user']."' OR email='".$_POST['user']."'");
 				if($user_login=='' || $_POST['password']==''){
 					echo "vacio";
 					return 0;
 				}
 			}
 			while($row_login=mysqli_fetch_array($rs_login)){
-				if($user_login!=$row_login['user']){
+				if($user_login!=$row_login['user'] && $user_login!=$row_login['email']){
 					echo "user";
 					return 0;
 				}else{
