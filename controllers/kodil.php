@@ -5,7 +5,7 @@
 		return header("location:index.php");
 	}
 	$conexion_kodil=mysqli_connect("localhost","root","") or die ("Error en servidor");
-	mysqli_select_db($conexion_kodil,"kodil_2") or die ("Error en db");
+	mysqli_select_db($conexion_kodil,"kodil") or die ("Error en db");
 	$datos=false;
 	//$titular=$_POST['titular'];
 	$num_tarjeta=$_POST['num_tarjeta'];
