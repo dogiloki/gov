@@ -1,5 +1,13 @@
 <?php
 
+	//Agregar archivos del a librería
+	require '../librerias/PHPMailer/src/Exception.php';
+	require '../librerias/PHPMailer/src/PHPMailer.php';
+	require '../librerias/PHPMailer/src/SMTP.php';
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\SMTP;
+	use PHPMailer\PHPMailer\Exception;
+
 	if(isset($_GET['v'])){
 		include('../conexion.php');
 		session_start();
@@ -100,7 +108,7 @@
 			$code.=$cvv=mt_rand(0,9);
 			$code.=$cvv=mt_rand(0,9);
 			mysqli_query($conexion,"INSERT INTO users VALUES ('".$id."','".$_POST['name']."','','".$_POST['phone']."','".$_POST['email']."','".$_POST['birth']."','".$_POST['sexo']."','".$_POST['cp']."',now(),'".$_POST['user']."','".$password."','".$img."',1,0,0)") or die ("error");
-			echo "$&$&".$id;
+			echo $id;
 			return 0;
 			/*$mail=new PHPMailer(true);
 			mysqli_query($conexion,"INSERT INTO verify VALUES ('".$id."','".$code."')") or die ("error");
@@ -113,6 +121,7 @@
       					DROP EVENT IF EXISTS z".$id.";
 					END";
 			mysqli_query($conexion,$sql_event) or die ("error");
+			mysqli_query($conxion,"SET GLOBAL event_scheduler='ON' ") or die ("error");
 			try{
 			    //Configurar servidor
 			    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -120,16 +129,16 @@
 				$mail->Host='smtp.gmail.com';
 			    $mail->SMTPAuth=true;
 		 	    $mail->Username='genesis.of.videogames@gmail.com';
-			    $mail->Password='8Y6NCKgBqBPgmrc';
+			    $mail->Password='';
 			    $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
 			    $mail->Port=587;
 						
 			   	$mail->setFrom('genesis.of.videogames@gmail.com', 'Genesis of videogames');
 			    $mail->addAddress($_POST['email']);     // Add a recipient
 				
-			    /*
-			    $mail->addAttachment('file.zip');
-			    $mail->addAttachment('image.jpg', 'new.jpg');---------------
+			    
+			    //$mail->addAttachment('file.zip');
+			    //$mail->addAttachment('image.jpg','new.jpg');
 				
 			    $mail->isHTML(true);
 			    $time=time();
@@ -140,16 +149,16 @@
 				}
 				fclose($fp);
 			    $mail->Subject="REGISTRO EN GOV - ".date("d-m-Y (H:i:s)",$time);
-			   	/*$mail->Body="<center><h1>SINO RECONOCES ESTE CORREO O NO LO SOLICITASTE IGNORALO</h1><br><br><a style='padding: 10px; color: #f5f5f5; background: #F86400; cursor: pointer; font-size: 25px; text-decoration: none; border: 1px solid #c2c2c2c;' title='activar' href='http://".$ip."/gov/controllers/user.php?v=active&id=".$id."&op=1'>ACTIVAR CUENTA</a></center>";-----------
+			   	$mail->Body="<center><h1>SINO RECONOCES ESTE CORREO O NO LO SOLICITASTE IGNORALO</h1><br><br><a style='padding: 10px; color: #f5f5f5; background: #F86400; cursor: pointer; font-size: 25px; text-decoration: none; border: 1px solid #c2c2c2c;' title='activar' href='http://".$ip."/gov/controllers/user.php?v=active&id=".$id."&op=1'>ACTIVAR CUENTA</a></center>";
 			   	$mail->Body="<center><h1>SINO RECONOCES ESTE CORREO O NO LO SOLICITASTE IGNORALO</h1><br><br><strong style='font-size: 30px;'>CÓDIGO: ".$code."</strong><br><br>caducá en 5 minutos</a></center>";
 					
 			    $mail->send();
 			}catch(Exception $e) {
 				echo "email";//{$mail->ErrorInfo}
 			    return 0;
-			}*/
+			}
 			echo "error";
-			return 0;
+			return 0;*/
 		}
 		if($_GET['v']=='active'){
 			if(isset($_POST['id_user']) && isset($_GET['op']) && $_GET['op']=='1' && isset($_POST['code'])){
@@ -162,7 +171,7 @@
 						echo "CÓDIGO NO VÁLIDO";
 					}
 				}
-				//mysqli_query($conexion,"CALL active('".$_GET['id']."',".$_GET['op'].")") or die ("<h1>EEROR AL ACTIVAR CUENTA<br>CONTACTE CON LA PÁGINA</h1>");
+				//mysqli_query($conexion,"CALL active('".$_GET['id']."',".$_GET['op'].")") or die ("<h1>ERROR AL ACTIVAR CUENTA<br>CONTACTE CON LA PÁGINA</h1>");
 			}
 			return 0;
 		}

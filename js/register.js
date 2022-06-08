@@ -29,7 +29,7 @@ function register(){
                 'birth':$("#birth").val(),
                 'cp':'',
                 'phone':'',
-                'email':'',
+                'email':$("#user_register").val(),
                 'user':$("#user_register").val(),
                 'password_veri':$("#password_veri").val(),
                 'password':$("#password").val(),
@@ -84,6 +84,7 @@ function birth(){
         $("#birth").css('border','2px solid red');
         $("#birth").attr('title','No válido');
         veri_birth==false;
+        return;
     }
 	var fecha=$("#birth").val();
 	if(typeof fecha != "string" && fecha && esNumero(fecha.getTime())){

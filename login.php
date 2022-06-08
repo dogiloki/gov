@@ -28,7 +28,7 @@ if(!isset($_SESSION['gov']['id'])){
 					<div class="login-title">INGRESAR</div>
 					<div class="login-content-caja">
 						<strong id="aviso_user"></strong>
-						Usuario<input type="text" placeholder="Usuario" id="user" class="login-caja" onkeyup="login2()" autocomplete="off">
+						Email<input type="text" placeholder="Correo electrónico" id="user" class="login-caja" onkeyup="login2()" autocomplete="off">
 					</div>
 					<div class="login-content-caja">
 						Contraseña<input type="password" placeholder="Contraseña" id="password" class="login-caja" onkeyup="login2()">

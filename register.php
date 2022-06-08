@@ -34,7 +34,7 @@ if(!isset($_SESSION['gov']['id'])){
 					</div>
 					<div class="register-content-caja">
 						<strong id="aviso_user"></strong>
-						Usuario / Email<input type="text" placeholder="Usuario o email" id="user_register" class="register-caja" onkeyup="user();email();" autocomplete="off">
+						Email<input type="email" placeholder="Correo electrónico" id="user_register" class="register-caja" onkeyup="email();" autocomplete="off">
 					</div>
 					<!--<div class="register-content-caja">
 						Apellidos(s)<input type="text" placeholder="Apellidos(s)" id="surname" class="register-caja" autocomplete="off">
@@ -59,11 +59,11 @@ if(!isset($_SESSION['gov']['id'])){
 					</div>-->
 					<div class="register-content-caja">
 						<strong id="aviso_password"></strong>
-						Contraseña<input type="password" placeholder="Contraseña" id="password" class="register-caja" onkeyup="password()">
+						Contraseña<input type="password" placeholder="Contraseña" id="password" class="register-caja" onkeyup="password()" onchange="password()">
 					</div>
 					<div class="register-content-caja">
 						<strong id="aviso_password_veri"></strong>
-						Repite tu contraseña<input type="password" placeholder="Repite tu contraseña" id="password_veri" class="register-caja" onkeyup="password_veri()">
+						Repite tu contraseña<input type="password" placeholder="Repite tu contraseña" id="password_veri" class="register-caja" onkeyup="password_veri()" onchange="password_veri()">
 					</div>
 					<div class="register-content-caja">
 						<input type="text" id="sexo" value="" readonly hidden>

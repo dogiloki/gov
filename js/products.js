@@ -170,6 +170,9 @@ function calclular_cart_fisico(){
         method:"post",
         data:{},
         success:function(value){
+            if(value=="login"){
+                return;
+            }
             var json=eval("("+value+")");
             $("#cantidad_productos_fisico").html("Productos añadidos: "+json[0]);
             $("#total_cart_fisico").html("Total a pagar: $"+json[1]);
@@ -182,6 +185,9 @@ function calclular_cart_digital(){
         method:"post",
         data:{},
         success:function(value){
+            if(value=="login"){
+                return;
+            }
             var json=eval("("+value+")");
             $("#cantidad_productos_digital").html("Productos añadidos: "+json[0]);
             $("#total_cart_digital").html("Total a pagar: $"+json[1]);

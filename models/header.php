@@ -20,7 +20,7 @@ if(!isset($_SESSION['gov']['id'])){
 					<option onclick="$('#category').val('Consolas')">Consolas
 					<option onclick="$('#category').val('Accesorios')">Accesorios
 					<option onclick="$('#category').val('Tarjetas')">Tarjetas
-					<option onclick="$('#category').val('Especiales')">Especioales
+					<option onclick="$('#category').val('Especiales')">Especiales
 				</div>
 			</div>
 			<input type="search" class="caja-search" placeholder="BUSCAR" name="search" required>
