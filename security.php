@@ -24,22 +24,22 @@
 			<div>
 				<strong class="aviso" id="aviso_email"></strong>
 				<div class="content-caja">
-					<input type="text" value="EMAIL" class="caja-text" disabled>
+					<input type="text" value="EMAIL *" class="caja-text" disabled>
 					<input type="email" value="<?php echo $_SESSION['gov']['email']; ?>" class="caja" id="email" onkeyup="email()" placeholder="Email" autocomplete="off">
 				</div>
 				<strong class="aviso" id="aviso_user"></strong>
 				<div class="content-caja">
-					<input type="text" value="USUARIO *" class="caja-text" disabled>
+					<input type="text" value="USUARIO" class="caja-text" disabled>
 					<input type="" value="<?php echo $_SESSION['gov']['user']; ?>" class="caja" id="user" onkeyup="user()" placeholder="Usuario" autocomplete="off">
+				</div>
+				<div class="content-caja">
+					<input type="text" value="CONTRASEÑA ACTUAL *" class="caja-text" disabled>
+					<input type="password" placeholder="********" class="caja" id="password_actual">
 				</div>
 				<strong class="aviso" id="aviso_password"></strong>
 				<div class="content-caja">
 					<input type="text" value="CONTRASEÑA NUEVA" class="caja-text" disabled>
 					<input type="password" placeholder="Cambiar contraseña" class="caja" id="password" onkeyup="password()">
-				</div>
-				<div class="content-caja">
-					<input type="text" value="CONTRASEÑA ACTUAL *" class="caja-text" disabled>
-					<input type="password" placeholder="********" class="caja" id="password_actual">
 				</div>
 				<strong class="aviso" id="aviso"></strong>
 				<div class="content-caja" style="display: block;">

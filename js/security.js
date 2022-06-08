@@ -65,10 +65,8 @@ function user(){
                 veri_user=true;
             }
             if($("#user").val()==''){
-                $("#aviso_user").html("Dígite un usuario");
-                $("#user").css('border','1px solid red');
-                $("#user").attr('title','');
-                veri_user=false;
+                $("#user").attr('title','Sin usuario');
+                veri_user=true;
             }
         }
     })
@@ -98,7 +96,7 @@ function email(){
 		    	$("#aviso_email").html("");
 		        $("#email").css('border','1px solid #c2c2c2');
 		        $("#email").attr('title','');
-				veri_email=true;
+				veri_email=false;
 		    }
         }
     })
