@@ -21,6 +21,10 @@
 			return 0;
 		}
 		if($_GET['v']=='email'){
+			if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+				echo "Email no válido";
+				return 0;
+			}
 			if($_POST['email']){
 				$rs_email=mysqli_query($conexion,"SELECT * FROM users WHERE email='".$_POST['email']."'");
 				while($row_email=mysqli_fetch_array($rs_email)){

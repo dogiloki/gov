@@ -81,7 +81,7 @@ function email(){
             'posi':'security'
         },
         success:function(value){
-            if(value=='Este email ya esta registrado'){
+            if(value=='Este email ya esta registrado' || value=='Email no válido'){
                 $("#aviso_email").html(value);
                 $("#email").css('border','2px solid red');
                 $("#email").attr('title','No válido');

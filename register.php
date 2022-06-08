@@ -34,7 +34,7 @@ if(!isset($_SESSION['gov']['id'])){
 					</div>
 					<div class="register-content-caja">
 						<strong id="aviso_user"></strong>
-						Email<input type="email" placeholder="Correo electrónico" id="user_register" class="register-caja" onkeyup="email();" autocomplete="off">
+						Email<input type="email" placeholder="Correo electrónico" id="user_register" class="register-caja" onkeyup="email();" onchange="email()" autocomplete="off">
 					</div>
 					<!--<div class="register-content-caja">
 						Apellidos(s)<input type="text" placeholder="Apellidos(s)" id="surname" class="register-caja" autocomplete="off">

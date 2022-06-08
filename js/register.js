@@ -212,13 +212,13 @@ function email(){
             'email':$("#user_register").val()
         },
         success:function(value){
-            if(value=='Este email ya esta registrado'){
+            if(value=='Este email ya esta registrado' || value=='Email no válido'){
                 $("#aviso_user").html(value);
                 $("#user_register").css('border','2px solid red');
                 $("#user_register").attr('title','No válido');
                 veri_email=false;
             }else{
-                $("#aviso_email").html("");
+                $("#aviso_user").html("");
                 $("#user_register").css('border','1px solid #c2c2c2');
                 $("#user_register").attr('title','');
                 veri_email=true;
