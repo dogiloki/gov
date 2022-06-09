@@ -109,9 +109,11 @@ function comprar(total_buy,id_product,cantidad1,color,format){
         $("#aviso_pago").html("DATOS INCORRECTO INFORMACIÓN DE ENTREGA");
     }else{
         $.ajax({
-            url:"controllers/kodil.php",
+            url:"http://localhost/kodil/controllers/kodil.php",
             method:"post",
             data:{
+                'v':'comprar',
+                'cuenta_para':'8100 6736 2395 13',
                 'num_tarjeta':$("#num_tarjeta").val(),
                 'dia':$("#exp_dia").val(),
                 'mes':$("#exp_mes").val(),
