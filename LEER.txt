@@ -4,7 +4,7 @@ se llama: gov
 
 //Para adminsitrador
 usuario: admin
-contraseña: Loki12345678
+contraseña: Admin123
 
 INTEGRANTES
 Kelly Esther Mendoza Gachuz
