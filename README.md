@@ -3,7 +3,7 @@ Este sitio web tiene una conexión con otra aplicación Kodil https://github.com
 
 <b>BASE DE DATOS</b><br>
 en la carpeta db<br>
-nombre: kodil
+nombre: gov
 
 <b>Para adminsitrador</b><br>
 usuario: admin<br>
