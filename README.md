@@ -1,4 +1,4 @@
-# GENESIS OF VIDEOGAMES (GOV)
+# GENESIS OF VIDEOGAMES (GOV) - PROYECTO INICIADO EN MARZO 2020
 GOV es una tienda online, dónde puede vender productos relacionados con los videojuegos, consolas, juegos, accesorios, tarjeta para comras o edicciones espciales. Esta categorías estas categrías están disponibles.
 
 Este sitio web tiene una conexión con otra aplicación Kodil https://github.com/dogiloki/kodil.git ya que la página solo acepta pagos de tarjetas gestionadas por esta aplicación (tarjeta no reales)
